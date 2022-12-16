@@ -1,14 +1,53 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/jk-abode" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/login.css">
     <title>CyberGhana - Login</title>
 </head>
+
 <body>
 
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="welcome">
+                <div class="ballon-container">
+                    <div class="ballon top"></div>
+                    <div class="ballon bottom"></div>
+                </div>
+
+                <div class="welcome-cirlce">
+                    <span class="welcome-text">welcome</span>
+                </div>
+            </div>
+
+            <div class="login-frame">
+                <div class="company-logo">
+                    <img class="Logo" src="./asset/cyberGhana-logo.svg" alt="CyberGhana Logo">
+                </div>
+
+                <span class="login-text">Login</span>
+
+                <form action="#" class="login-form">
+                    <input class="loginfield-text" type="text" name="username" id="username" placeholder="Username" required>
+
+                    <input class="loginfield-text" type="password" name="password" id="password" placeholder="Password" minlength="8" required>
+
+                    <input type="submit" value="Login" class="login-btn">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
 </body>
+
 </html>

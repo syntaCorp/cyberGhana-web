@@ -1,4 +1,4 @@
-.colors{
+.colors {
     color: #03026B;
     color: #FFCC00;
 
@@ -10,9 +10,165 @@
     font-weight: 400;
     src: local('JK Abode'), url('https://fonts.cdnfonts.com/s/15053/JKAbode-Demo.woff') format('woff');
 }
-@font-face {
-    font-family: 'JK Abode';
-    font-style: normal;
-    font-weight: 300;
-    src: local('JK Abode'), url('https://fonts.cdnfonts.com/s/15053/JKAbode-LightDemo.woff') format('woff');
+
+html {
+    /* background-color: #414040; */
+    font-size: 16px;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    background: linear-gradient(-135deg,#db5ad3,#07058b)
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    background: url("../asset/login-background.jpg") 65% 35% no-repeat;
+    background-size: cover;
+    /* position: relative; */
+}
+
+.login-wrapper {
+    display: flex;
+    color: #fff;
+    justify-content: space-evenly;
+    column-gap: 45em;
+}
+
+.welcome {
+    position: relative;
+}
+
+.welcome-cirlce {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: end;
+    height: 650px;
+    width: 650px;
+    border-radius: 50%;
+    background-color: #03026B;
+    color: #fff;
+    margin-left: -350px;
+    box-shadow: 14px 2px 20px 0px #00000091;
+}
+
+.ballon-container {
+    position: absolute;
+    flex-direction: column;
+    margin-left: 5.75em;
+}
+
+div.ballon {
+    position: relative;
+    width: 99px;
+    height: 99px;
+    border-radius: 49.5px;
+    background-color: #FFCC00;
+}
+
+.welcome-text {
+    color: #ffffff;
+    font-size: 3.125em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 .5em;
+}
+
+.ballon.bottom {
+    /* top: 551px; */
+    /* position: relative; */
+    bottom: -450px;
+}
+
+input {
+    display: block;
+}
+
+.login-frame {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center;  */
+    flex-wrap: wrap;
+    width: 20.375em;
+    border-radius: 4em;
+    text-align: center;
+}
+
+.login-text {
+    color: #03026B;
+    font-size: 6rem;
+    font-family: 'JK Abode', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.logo {
+    width: 8em;
+    margin-bottom: 1.5em;
+    margin-bottom: 0.25em;
+}
+
+.company-logo {
+    display: inline-block;
+    margin: 5em auto 0;
+}
+
+span.login-text {
+    margin-bottom: .25em;
+}
+
+.loginfield-text{
+    color: rgb(43, 43, 43);
+    margin-bottom: 1.4em;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+form {
+    /* text-align: center; */
+    width: 100%;
+}
+
+input {
+    margin: 0 auto;
+    width: 90%;
+    border-radius: .5em;
+    padding: .65em;
+    border: 0;
+    background: #E8EEF5;
+    outline:0;
+    cursor: pointer;
+}
+
+input.login-btn{
+    background-color: #03026B;
+    color: white;
+    font-weight: 900;
+}
+
+.loginfield-text:focus {
+    /* border: 2px solid #03026B; */
+    box-shadow: 10px 10px 10px #03026B;
+    ;
+  }
+
+  .loginfield-text:focus {
+    /* border: 2px solid #03026B; */
+    box-shadow: 0 0 8px 1px #03026b;
+}
+
+input[type=submit]:hover{
+    background-color: rgb(32, 30, 136);
+}
+
