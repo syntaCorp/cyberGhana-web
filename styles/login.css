@@ -1,9 +1,3 @@
-.colors {
-    color: #03026B;
-    color: #FFCC00;
-
-}
-
 @font-face {
     font-family: 'JK Abode';
     font-style: normal;
@@ -17,13 +11,10 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     margin: 0;
     box-sizing: 0;
     font-family: 'Inter', sans-serif;
     font-family: 'League Spartan', sans-serif;
-    background: linear-gradient(-135deg,#db5ad3,#07058b)
 }
 
 .container {
@@ -31,18 +22,15 @@ body {
     align-items: center;
     height: 100%;
 
-    background: url("../asset/login-background.jpg") 65% 35% no-repeat;
-    background-size: cover;
-    /* position: relative; */
 }
 
 .login-wrapper {
     display: flex;
     color: #fff;
-    justify-content: space-evenly;
-    column-gap: 45em;
+    justify-content: space-between;
+    /* column-gap: 45em; */
+    width: 100%;
 }
-
 .welcome {
     position: relative;
 }
@@ -83,11 +71,6 @@ div.ballon {
     padding: 0 .5em;
 }
 
-.ballon.bottom {
-    /* top: 551px; */
-    /* position: relative; */
-    bottom: -450px;
-}
 
 input {
     display: block;
@@ -98,9 +81,8 @@ input {
     display: flex;
     flex-direction: column;
     align-content: center;
-    /* justify-content: center;  */
     flex-wrap: wrap;
-    width: 20.375em;
+    width: 22.375em;
     border-radius: 4em;
     text-align: center;
 }
@@ -136,7 +118,6 @@ span.login-text {
 }
 
 form {
-    /* text-align: center; */
     width: 100%;
 }
 
@@ -151,20 +132,20 @@ input {
     cursor: pointer;
 }
 
-input.login-btn{
+input.login-btn {
     background-color: #03026B;
     color: white;
     font-weight: 900;
+    font-size: 1.125em;
+    line-height: 1;
 }
 
 .loginfield-text:focus {
-    /* border: 2px solid #03026B; */
     box-shadow: 10px 10px 10px #03026B;
     ;
   }
 
   .loginfield-text:focus {
-    /* border: 2px solid #03026B; */
     box-shadow: 0 0 8px 1px #03026b;
 }
 
@@ -172,3 +153,54 @@ input[type=submit]:hover{
     background-color: rgb(32, 30, 136);
 }
 
+@media screen and (min-width:300px) and (max-width:598px){
+    .container {
+        background: linear-gradient(79deg,#191478,#44addf);
+    }
+
+    .welcome{
+        display: none;
+    }
+
+    .login-frame{
+        width: 80%;
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 0 0 7em;
+    }
+
+    .company-logo {
+        display: inline-block;
+        margin: 3em auto 0;
+    }
+
+}
+
+@media screen and (min-width:599px){
+.container{
+    background: url("../asset/login-background.jpg") 65% 35% no-repeat;
+    background-size: cover;
+}
+
+.ballon.bottom {
+    bottom: -450px;
+}
+
+.company-logo {
+    display: inline-block;
+    margin: 3em auto 0;
+}
+.login-frame {
+    margin-right: 3em;
+    margin-left: 1em;
+}
+
+}
+
+@media screen and (min-width:899px){
+
+    .login-frame {
+        margin-right: 10em;
+    }
+    
+    }
