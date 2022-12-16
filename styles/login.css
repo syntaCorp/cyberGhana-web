@@ -1,0 +1,18 @@
+.colors{
+    color: #03026B;
+    color: #FFCC00;
+
+}
+
+@font-face {
+    font-family: 'JK Abode';
+    font-style: normal;
+    font-weight: 400;
+    src: local('JK Abode'), url('https://fonts.cdnfonts.com/s/15053/JKAbode-Demo.woff') format('woff');
+}
+@font-face {
+    font-family: 'JK Abode';
+    font-style: normal;
+    font-weight: 300;
+    src: local('JK Abode'), url('https://fonts.cdnfonts.com/s/15053/JKAbode-LightDemo.woff') format('woff');
+}
