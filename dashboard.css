@@ -1,0 +1,83 @@
+/* 
+colors:
+dark-blue #00216B, #03026B
+dark yellow: #FFCC00
+
+
+*/
+html {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    box-sizing: 0;
+}
+
+.app-container {
+    background-color: #FFCC00;
+    height: 100vh;
+    display: grid;
+
+}
+
+.top-bar {
+    background-color: #00216B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.avatar__image,.notification__icon {
+    width: 3em;
+}
+
+.avatar {
+    margin: 0 2em 0 1.5em;
+    /* width: 5em; */
+}
+
+.edit__icon{
+    font-size: 2em;
+    margin: 0 0 0 1em;
+    /* color: rgb(255, 255, 255); */
+}
+.logo{
+    width: 4em;
+}
+
+.company-logo {
+    margin: 0 0 0 1em;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.user__info {
+    display: flex;
+}
+.dashboard__text {
+    display: inline;
+    margin: 0 0 0 .5em;
+    color: #fafafa;
+}
+.services{
+    background-color: #00216B;
+    border-radius: 0 0 0 3em;
+    margin-left: 2em;
+}
+
+.dash_menu {
+    /* flex-wrap: wrap; */
+    display: flex;
+    align-items: center;
+}
+
+img.dashboard__icon {
+    margin: 1em .5em;
+}
+
+span {
+    margin: 0 1em;
+}
