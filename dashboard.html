@@ -31,11 +31,22 @@
                             alt="Notification icon">
                     </div>
 
-                    <div class="edit"><img class="edit__icon " src="./dashboard-assets/edit-icon.svg" alt="Edit icon">
+                    <div class="edit"><img class="edit__icon" src="./dashboard-assets/edit-icon.svg" alt="Edit icon">
                     </div>
 
-                    <div class="avatar"><img class="avatar__image" src="./dashboard-assets/person_icon.svg"
+                    <div class="avatar"><img class="avatar__icon" src="./dashboard-assets/person_icon.svg"
                             alt="Male user icon">
+                    </div>
+                    <div class="user__drop__menu">
+                        <!-- <span class="dropdown__icon fa-solid fa-list-dropdown"></span> -->
+                        <span class="dropdown__icon fa fa-caret-down"></span>
+                        <a class="drop__cmd" href="#">
+                            <span class="fa fa-cog cog__icon"></span>
+                            Settings</a>
+                            
+                        <a class="drop__cmd" href="#">
+                            <span class="logout__icon fa-solid fa-right-from-bracket"></span>
+                            Logout</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +86,7 @@
                     <li class="service-item">Help Desk</li>
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
-                </ul>
+                </ul> 
 
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
@@ -93,7 +104,7 @@
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
                 </ul>
-                <div class="dash_menu">
+                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
                     Services
                     <span class="drop__icon">
@@ -108,17 +119,31 @@
                     <li class="service-item">Help Desk</li>
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
-                </ul>
+                </ul>  
 
             </div>
         </aside>
 
          <main>
             <div class="main__content">
-                eh
             </div>
         </main>
+        
+        <footer>(C) CyberGhana</footer>
     </div>
+    <script>
+        const userAvatar = $(".avatar__icon");
+        const dropMenu = $('.user__drop__menu');
+
+        userAvatar.on('click', ()=>{
+            dropMenu.toggle();
+        })
+
+        dropMenu.on('mouseleave', () => {
+            dropMenu.hide();
+        })
+      
+    </script>
 </body>
 
 </html>

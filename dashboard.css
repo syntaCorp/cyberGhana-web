@@ -15,59 +15,66 @@ body {
     box-sizing: 0;
 }
 
-/* .app-container {
-    background-color: #fcd22d;
-    height: 100vh;
-    display: grid;
-
-} */
-
 .top-bar {
-    background-color: #00216B;
+    /* background-color: #01287e; */
+    background-color: #346cb0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em;
+    padding: 0.25em;
+    min-width: 100vw;
+    position: fixed;
 }
 
-.avatar__image,.notification__icon {
-    width: 3em;
+.avatar__icon,
+.notification__icon,
+.edit__icon:hover {
+    cursor: pointer;
+}
+
+.avatar__icon,
+.edit__icon,
+.notification__icon {
+    width: 2em;
 }
 
 .avatar {
-    margin: 0 2em 0 1.5em;
-    /* width: 5em; */
+    margin-inline: 1.5em 2em;
 }
 
-.edit__icon{
-    font-size: 2em;
-    margin: 0 0 0 1em;
-    /* color: rgb(255, 255, 255); */
+.edit__icon {
+    margin-inline-start: 1em;
 }
-.logo{
-    width: 4em;
+
+.logo {
+    width: 3.5em;
 }
 
 .company-logo {
-    margin: 0 0 0 1em;
+    margin-inline-start: 1em;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
+
 .user__info {
     display: flex;
+    align-items: center;
 }
+
 .dashboard__text {
     display: inline;
     margin: 0 0 0 .5em;
     color: #fafafa;
 }
+
 .services {
     background-color: #00216B;
     border-radius: 1em 0 0 1em;
     margin-left: 1em;
     padding: 1em;
+    /* height: 100vh; */
 }
+
 .dash_menu {
     /* flex-wrap: wrap; */
     display: flex;
@@ -85,13 +92,11 @@ img.dashboard__icon {
 .drop__icon {
     margin: 0 2em;
 }
+
 .app-container {
     background-color: #fcd22d;
-    /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(9, 1fr); */
-    /* gap: 2em; */
 }
 
 header {
@@ -102,13 +107,62 @@ header {
 }
 
 main {
-    /* display: grid; */
+    min-height: 100vh;
     background-color: aliceblue;
     grid-column-start: 2;
     grid-column-end: 5;
 }
 
-li{
+li {
     list-style-type: none;
     color: #fafafa;
+}
+
+.cog__icon,
+.logout__icon {
+    width: 2em;
+}
+
+a.drop__cmd {
+    text-decoration: none;
+    color: #292929;
+    display: block;
+    font-weight: 600;
+    margin-block: .5em;
+    padding: .5em 1.25em;
+}
+
+/* action menus*/
+.user__drop__menu {
+    display: none;
+    background-color: #f6f7f9;
+    padding: 0 .5em;
+    position: absolute;
+    top: 4em;
+    right: 1%;
+    box-shadow: 0px 0px 11px rgb(0 0 0 / 28%);
+    border-radius: .5em;
+    /* transition: .5s; */
+}
+
+.user__drop__menu:hover {
+    /* transition: .5s; */
+}
+
+.drop__cmd:hover {
+    background-color: #346cb0;
+}
+
+.dropdown__icon {
+    position: absolute;
+    right: 15%;
+    bottom: 1.9em;
+    transform: rotate(180deg);
+    color: #f6f7f9;
+    font-size: 45px;
+}
+
+footer {
+    text-align: center;
+    grid-column: -5/-1;
 }
