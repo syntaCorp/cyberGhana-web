@@ -58,11 +58,11 @@
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
                     Services
                     <span class="drop__icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </span>
                 </div>
 
-                <ul class="service-list">
+                <ul class="service-list hide__service">
                     <li class="service-item">Commerce</li>
                     <li class="service-item">Analytics</li>
                     <li class="service-item">Crypto</li>
@@ -75,11 +75,11 @@
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
                     Courses
                     <span class="drop__icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </span>
                 </div>
 
-                <ul class="service-list">
+                <ul class="service-list hide__service">
                     <li class="service-item">Commerce</li>
                     <li class="service-item">Analytics</li>
                     <li class="service-item">Crypto</li>
@@ -87,16 +87,16 @@
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
                 </ul> 
-
+ 
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
                     Services
                     <span class="drop__icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </span>
                 </div>
 
-                <ul class="service-list">
+                <ul class="service-list hide__service">
                     <li class="service-item">Commerce</li>
                     <li class="service-item">Analytics</li>
                     <li class="service-item">Crypto</li>
@@ -108,30 +108,36 @@
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
                     Services
                     <span class="drop__icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </span>
                 </div>
 
-                <ul class="service-list">
+                <ul class="service-list hide__service">
                     <li class="service-item">Commerce</li>
                     <li class="service-item">Analytics</li>
                     <li class="service-item">Crypto</li>
                     <li class="service-item">Help Desk</li>
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
-                </ul>  
+                </ul>   
 
             </div>
         </aside>
 
          <main>
             <div class="main__content">
+                <h1>CyberGhana</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum perspiciatis dignissimos quidem nostrum laborum mollitia non aperiam, quos officiis blanditiis quam aliquid, commodi, voluptatum molestias recusandae alias rerum ea.</p>
             </div>
         </main>
         
-        <footer>(C) CyberGhana</footer>
+        <footer>
+            <h5 class="foot-text">&#169; CyberGhana 2022</h5>
+        </footer>
     </div>
     <script>
+        // user profile actions
+        // show hidden settings and logout menu on click 
         const userAvatar = $(".avatar__icon");
         const dropMenu = $('.user__drop__menu');
 
@@ -142,6 +148,22 @@
         dropMenu.on('mouseleave', () => {
             dropMenu.hide();
         })
+
+
+        // dashboard interactivity
+        // drop submenus on user click
+
+        const dropArrow = $('.drop__icon');    
+        dropArrow.on('click', (e)=> {
+            const clickedArrow = $(this);
+            clickedArrow.toggleClass('toggle__down');
+
+            // const clickedArrow = $(this);
+            // clickedArrow.toggleClass('toggle__down')
+            // console.log(clickedArrow)
+
+        })
+        
       
     </script>
 </body>

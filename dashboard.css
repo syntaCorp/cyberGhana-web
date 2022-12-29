@@ -21,29 +21,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.25em;
-    min-width: 100vw;
+    /* padding: 0.25em; */
+    /* min-width: 100vw; */
+    left: 0;
+    right: 0;
     position: fixed;
 }
 
-.avatar__icon,
-.notification__icon,
+.avatar__icon:hover,
+.notification__icon:hover,
 .edit__icon:hover {
     cursor: pointer;
+    background-color: #2e63a3;
 }
 
 .avatar__icon,
 .edit__icon,
 .notification__icon {
     width: 2em;
+    padding: .7em;
 }
 
 .avatar {
-    margin-inline: 1.5em 2em;
-}
-
-.edit__icon {
-    margin-inline-start: 1em;
+    margin-inline: 0 2em;
 }
 
 .logo {
@@ -54,6 +54,7 @@ body {
     margin-inline-start: 1em;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .user__info {
@@ -63,7 +64,7 @@ body {
 
 .dashboard__text {
     display: inline;
-    margin: 0 0 0 .5em;
+    margin: 0 0 0 .25em;
     color: #fafafa;
 }
 
@@ -71,18 +72,28 @@ body {
     background-color: #00216B;
     border-radius: 1em 0 0 1em;
     margin-left: 1em;
-    padding: 1em;
-    /* height: 100vh; */
+    padding: 1em 0em;
+    margin-top: 3.4em;
+    /* min-width: 10em */
 }
 
 .dash_menu {
-    /* flex-wrap: wrap; */
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
-    color: #fafafa;
+    color: #ffffff;
     font-size: 1.5rem;
     border-bottom: 1px solid #fafafa;
     border-top: 1px solid #fafafa;
+    transition: .5s;
+    cursor: pointer;
+}
+.hide__service{
+    display: none;
+}
+
+.dash_menu:hover {
+    background-color: #346cb079;
 }
 
 img.dashboard__icon {
@@ -90,11 +101,18 @@ img.dashboard__icon {
 }
 
 .drop__icon {
-    margin: 0 2em;
+    margin: 0 1.5em;
+}
+.drop__icon:hover{
+    color: rgb(135 125 125);
+}
+.drop__icon:active{
+    color: rgb(73, 73, 73);
 }
 
+
 .app-container {
-    background-color: #fcd22d;
+    background-color: #f6f7f9;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -111,6 +129,10 @@ main {
     background-color: aliceblue;
     grid-column-start: 2;
     grid-column-end: 5;
+    /* position: relative; */
+    /* top: 7%; */
+    margin-top: 3.3em;
+    padding: 1em;
 }
 
 li {
@@ -140,11 +162,9 @@ a.drop__cmd {
     position: absolute;
     top: 4em;
     right: 1%;
-    box-shadow: 0px 0px 11px rgb(0 0 0 / 28%);
+    box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 42%);
     border-radius: .5em;
-    /* transition: .5s; */
 }
-
 .user__drop__menu:hover {
     /* transition: .5s; */
 }
@@ -162,7 +182,16 @@ a.drop__cmd {
     font-size: 45px;
 }
 
+.toggle__down{
+    transform: rotate(180deg);
+}
+
 footer {
     text-align: center;
     grid-column: -5/-1;
+    background-color: #346cb0;;
+}
+.foot-text {
+    font-weight: 300;
+    color: #a5acc5;
 }
