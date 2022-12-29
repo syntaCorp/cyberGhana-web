@@ -159,7 +159,7 @@ input.login-btn {
 }
 
 input[type=submit]:hover {
-    background-color: rgb(32, 30, 136);
+    background-color: rgb(32 30 136 / 74%);
 }
 
 /* BREAK POINTS */
