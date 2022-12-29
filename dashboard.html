@@ -43,7 +43,7 @@
                         <a class="drop__cmd" href="#">
                             <span class="fa fa-cog cog__icon"></span>
                             Settings</a>
-                            
+
                         <a class="drop__cmd" href="#">
                             <span class="logout__icon fa-solid fa-right-from-bracket"></span>
                             Logout</a>
@@ -86,11 +86,11 @@
                     <li class="service-item">Help Desk</li>
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
-                </ul> 
- 
+                </ul>
+
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
-                    Services
+                    Activities
                     <span class="drop__icon">
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </span>
@@ -104,9 +104,9 @@
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
                 </ul>
-                 <div class="dash_menu">
+                <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
-                    Services
+                    Trainings
                     <span class="drop__icon">
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </span>
@@ -119,18 +119,20 @@
                     <li class="service-item">Help Desk</li>
                     <li class="service-item">Monitoring</li>
                     <li class="service-item">Fitness</li>
-                </ul>   
+                </ul>
 
             </div>
         </aside>
 
-         <main>
+        <main>
             <div class="main__content">
                 <h1>CyberGhana</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum perspiciatis dignissimos quidem nostrum laborum mollitia non aperiam, quos officiis blanditiis quam aliquid, commodi, voluptatum molestias recusandae alias rerum ea.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum perspiciatis dignissimos
+                    quidem nostrum laborum mollitia non aperiam, quos officiis blanditiis quam aliquid, commodi,
+                    voluptatum molestias recusandae alias rerum ea.</p>
             </div>
         </main>
-        
+
         <footer>
             <h5 class="foot-text">&#169; CyberGhana 2022</h5>
         </footer>
@@ -141,7 +143,7 @@
         const userAvatar = $(".avatar__icon");
         const dropMenu = $('.user__drop__menu');
 
-        userAvatar.on('click', ()=>{
+        userAvatar.on('click', () => {
             dropMenu.toggle();
         })
 
@@ -153,18 +155,18 @@
         // dashboard interactivity
         // drop submenus on user click
 
-        const dropArrow = $('.drop__icon');    
-        dropArrow.on('click', (e)=> {
-            const clickedArrow = $(this);
-            clickedArrow.toggleClass('toggle__down');
+        const dropArrows = document.querySelectorAll('.drop__icon');
+        const serviceList = document.querySelectorAll('.service-list');
+        // console.log(serviceList);
 
-            // const clickedArrow = $(this);
-            // clickedArrow.toggleClass('toggle__down')
-            // console.log(clickedArrow)
+        dropArrows.forEach((arrow,id) => {
+            arrow.addEventListener('click', () => {
+                arrow.classList.toggle('toggle__down');
 
+                serviceList.item(id).classList.toggle('hide__service')
+            })
         })
-        
-      
+
     </script>
 </body>
 
