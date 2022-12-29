@@ -67,6 +67,7 @@ div.ballon {
     font-weight: 700;
     text-transform: uppercase;
     padding: 0 .5em;
+    cursor: pointer;
 }
 
 
@@ -81,7 +82,7 @@ input {
     align-content: center;
     flex-wrap: wrap;
     width: 22.375em;
-    border-radius: 4em;
+    border-radius: 2em;
     text-align: center;
 }
 
@@ -178,7 +179,12 @@ input[type=submit]:hover {
         margin: 0 auto;
         padding: 0 0 7em;
     }
-
+    .login-text {
+        font-size: 5rem;
+    }
+    .logo {
+        width: 6em;
+    }
     .company-logo {
         display: inline-block;
         margin: 3em auto 0;
