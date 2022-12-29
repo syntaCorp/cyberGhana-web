@@ -40,8 +40,8 @@ body {
     flex-wrap: wrap;
     align-content: space-evenly;
     justify-content: end;
-    height: 650px;
-    width: 650px;
+    height: 40.6em;
+    width: 40.6em;
     border-radius: 50%;
     background-color: #03026B;
     color: #fff;
@@ -56,9 +56,9 @@ body {
 
 div.ballon {
     position: relative;
-    width: 99px;
-    height: 99px;
-    border-radius: 49.5px;
+    width: 6em;
+    height: 6em;
+    border-radius:3em;
     background-color: #FFCC00;
 }
 
@@ -174,7 +174,7 @@ input[type=submit]:hover {
 
     .login-frame {
         width: 80%;
-        max-width: 375px;
+        max-width: 23.4em;
         margin: 0 auto;
         padding: 0 0 7em;
     }
@@ -185,8 +185,8 @@ input[type=submit]:hover {
     }
 
     div.ballon {
-        width: 80px;
-        height: 80px;
+        width: 5em;
+        height: 5em;
     }
 
 }
@@ -198,7 +198,7 @@ input[type=submit]:hover {
     }
 
     .ballon.bottom {
-        bottom: -470px;
+        bottom: -29.37em;
         width: 4em;
         height: 4em;
     }
@@ -209,22 +209,21 @@ input[type=submit]:hover {
     }
 
     .welcome-cirlce {
-        margin-left: -389px;
+        margin-left: -24.3em;
     }
 }
 
 @media screen and (min-width:900px) {
-    .container {
-        background: url("../asset/login-background.jpg") 65% 35% no-repeat;
+      .container {
+        background: linear-gradient(to bottom, rgb(7 7 58 / 54%), rgb(0 0 0 / 59%)), url(../asset/login-background.jpg) 65% 35% no-repeat;
         background-size: cover;
     }
-
     .login-frame {
         margin-right: 10em;
     }
 
     .welcome-cirlce {
-        margin-left: -360px;
+        margin-left: -22.5em;
     }
 
     .welcome-text {
@@ -233,7 +232,7 @@ input[type=submit]:hover {
     }
 
     .ballon.bottom {
-        bottom: -450px;
+        bottom: -28em;
     }
 
 }
