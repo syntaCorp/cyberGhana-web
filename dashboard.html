@@ -40,11 +40,11 @@
                     <div class="user__drop__menu">
                         <!-- <span class="dropdown__icon fa-solid fa-list-dropdown"></span> -->
                         <span class="dropdown__icon fa fa-caret-down"></span>
-                        <a class="drop__cmd" href="#">
+                        <a class="drop__cmd" href="#" target="_self">
                             <span class="fa fa-cog cog__icon"></span>
                             Settings</a>
 
-                        <a class="drop__cmd" href="#">
+                        <a class="drop__cmd" href="#" target="_self">
                             <span class="logout__icon fa-solid fa-right-from-bracket"></span>
                             Logout</a>
                     </div>
@@ -138,34 +138,49 @@
         </footer>
     </div>
     <script>
-        // user profile actions
-        // show hidden settings and logout menu on click 
-        const userAvatar = $(".avatar__icon");
-        const dropMenu = $('.user__drop__menu');
+        /* 
+        user profile actions
+        show hidden settings and logout menu on click 
+        */
+        const userAvatar = document.querySelector('.avatar__icon');
+        const dropMenu = document.querySelector('.user__drop__menu');
 
-        userAvatar.on('click', () => {
-            dropMenu.toggle();
+        // toogle display on user click
+        userAvatar.addEventListener('click', () => {
+            dropMenu.classList.toggle('show__drop__menu')
+        })
+      
+        //close dropdown when user click outside & on menu item
+        window.addEventListener('click', (e) => {
+            if(!e.target.matches('.avatar__icon') && dropMenu.classList.contains('show__drop__menu')){
+                dropMenu.classList.remove('show__drop__menu');
+            }
         })
 
-        dropMenu.on('mouseleave', () => {
-            dropMenu.hide();
-        })
 
-
-        // dashboard interactivity
-        // drop submenus on user click
-
+        /* 
+        dashboard interactivity
+        drop submenus on user click
+        */
         const dropArrows = document.querySelectorAll('.drop__icon');
         const serviceList = document.querySelectorAll('.service-list');
+        const dashMenuText = document.querySelectorAll('.dash_menu');
         // console.log(serviceList);
 
-        dropArrows.forEach((arrow,id) => {
+        dropArrows.forEach((arrow, id) => {
             arrow.addEventListener('click', () => {
                 arrow.classList.toggle('toggle__down');
 
                 serviceList.item(id).classList.toggle('hide__service')
             })
         })
+        // dashMenuText.forEach((menuHead) => {
+        //     menuHead.addEventListener('click', () => {
+        //         arrow.classList.toggle('toggle__down');
+
+        //         serviceList.item(id).classList.toggle('hide__service')
+        //     })
+        // })
 
     </script>
 </body>

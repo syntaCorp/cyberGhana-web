@@ -69,7 +69,7 @@ body {
 }
 
 .services {
-    background-color: #00216B;
+    background-color: #174276;
     border-radius: 1em 0 0 1em;
     margin-left: 1em;
     padding: 1em 0em;
@@ -93,7 +93,7 @@ body {
 }
 
 .dash_menu:hover {
-    background-color: #346cb079;
+    background-color: #3670b778;
 }
 
 img.dashboard__icon {
@@ -104,7 +104,8 @@ img.dashboard__icon {
     margin: 0 1.5em;
 }
 .drop__icon:hover{
-    color: rgb(135 125 125);
+    color: #00216B;
+    /* color: #3670b778; */
 }
 .drop__icon:active{
     color: rgb(73, 73, 73);
@@ -171,9 +172,11 @@ a.drop__cmd {
     box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 42%);
     border-radius: .5em;
 }
-.user__drop__menu:hover {
-    /* transition: .5s; */
+
+.show__drop__menu{
+    display: block;
 }
+
 
 .drop__cmd:hover {
     background-color: #346cb0;
