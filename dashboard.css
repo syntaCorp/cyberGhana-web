@@ -71,12 +71,14 @@ body {
 .services {
     background-color: #174276;
     border-radius: 1em 0 0 1em;
-    margin-left: 1em;
+    /* margin-left: 1em; */
     padding: 1em 0em;
     margin-top: 3.4em;
-    /* min-width: 10em */
+    /* min-width: 10em; */
+    position: fixed;
+    left: 0;
+    right: 80%;
 }
-
 .dash_menu {
     display: flex;
     /* flex-direction: column; */
@@ -98,11 +100,14 @@ body {
 }
 
 img.dashboard__icon {
-    margin: .5em .5em;
+    /* margin: .5em .5em; */
+    margin-inline: 1.5em 1em;
+    margin-block: .5em;
 }
 
 .drop__icon {
-    margin: 0 1.5em;
+    /* margin: 0 1.5em; */
+    margin-inline: .75em 0;
 }
 
 .drop__icon:hover {
@@ -140,9 +145,10 @@ main {
 li.service-item {
     list-style-type: none;
     color: #fafafa;
-    margin: .5em;
-    padding: .5em;
+    /* margin: .5em; */
+    padding: .65em .5em;
     cursor: pointer;
+    margin-inline-start: 6em;
 }
 
 ul.service-list {
@@ -200,16 +206,18 @@ a.drop__cmd {
 .toggle__down {
     transform: rotate(180deg);
 }
-
 footer {
     text-align: center;
-    grid-column: -6/-1;
+    grid-column: -5/-1;
     background-color: #346cb0;
-    ;
 }
 
 .foot-text {
     font-weight: 300;
     color: #aab2cd;
     margin-block: 1em;
+}
+
+.menu__option {
+    width: max-content;
 }

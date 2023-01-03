@@ -56,10 +56,13 @@
             <div class="services">
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
-                    Services
-                    <span class="drop__icon">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </span>
+
+                    <div class="menu__option">
+                        <span>Services</span>
+                        <i class="fa fa-angle-up drop__icon" aria-hidden="true"></i>
+                    </div>
+                    <!-- <span class="menu__option__name"></span> -->
+
                 </div>
 
                 <ul class="service-list hide__service">
@@ -73,10 +76,11 @@
 
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
-                    Courses
-                    <span class="drop__icon">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </span>
+
+                    <div class="menu__option">
+                        <span>Courses</span>
+                        <i class="fa fa-angle-up drop__icon" aria-hidden="true"></i>
+                    </div>
                 </div>
 
                 <ul class="service-list hide__service">
@@ -90,10 +94,10 @@
 
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
-                    Activities
-                    <span class="drop__icon">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </span>
+                    <div class="menu__option">
+                        <span>Activities</span>
+                        <i class="fa fa-angle-up drop__icon" aria-hidden="true"></i>
+                    </div>
                 </div>
 
                 <ul class="service-list hide__service">
@@ -106,10 +110,12 @@
                 </ul>
                 <div class="dash_menu">
                     <img class="dashboard__icon" src="./dashboard-assets/dashboard_grid.svg" alt="Dashboard grid menu">
-                    Trainings
-                    <span class="drop__icon">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </span>
+
+                    <div class="menu__option">
+                        <span>Trainings</span>
+                        <i class="fa fa-angle-up drop__icon" aria-hidden="true"></i>
+                    </div>
+
                 </div>
 
                 <ul class="service-list hide__service">
@@ -134,7 +140,7 @@
         </main>
 
         <footer>
-            <h5 class="foot-text">&#169; CyberGhana 2022</h5>
+            <h5 class="foot-text">&#169; CyberGhana 2023</h5>
         </footer>
     </div>
     <script>
@@ -149,38 +155,39 @@
         userAvatar.addEventListener('click', () => {
             dropMenu.classList.toggle('show__drop__menu')
         })
-      
+
         //close dropdown when user click outside & on menu item
         window.addEventListener('click', (e) => {
-            if(!e.target.matches('.avatar__icon') && dropMenu.classList.contains('show__drop__menu')){
+            if (!e.target.matches('.avatar__icon') && dropMenu.classList.contains('show__drop__menu')) {
                 dropMenu.classList.remove('show__drop__menu');
             }
         })
 
 
         /* 
-        dashboard interactivity
+        dashboard sidebar interactivity
         drop submenus on user click
         */
+        const menuOption = document.querySelectorAll('.menu__option');
         const dropArrows = document.querySelectorAll('.drop__icon');
         const serviceList = document.querySelectorAll('.service-list');
         const dashMenuText = document.querySelectorAll('.dash_menu');
-        // console.log(serviceList);
 
-        dropArrows.forEach((arrow, id) => {
-            arrow.addEventListener('click', () => {
-                arrow.classList.toggle('toggle__down');
 
-                serviceList.item(id).classList.toggle('hide__service')
+        menuOption.forEach((option, id) => {
+            option.addEventListener('click', (e) => {
+                if (e.target.tagName == 'SPAN') {
+                    dropArrows.item(id).classList.toggle('toggle__down');
+                    serviceList.item(id).classList.toggle('hide__service');
+                    
+                }
+                else if (e.target.tagName == 'I') {
+                    dropArrows.item(id).classList.toggle('toggle__down');
+                    serviceList.item(id).classList.toggle('hide__service');
+                }
+
             })
         })
-        // dashMenuText.forEach((menuHead) => {
-        //     menuHead.addEventListener('click', () => {
-        //         arrow.classList.toggle('toggle__down');
-
-        //         serviceList.item(id).classList.toggle('hide__service')
-        //     })
-        // })
 
     </script>
 </body>
